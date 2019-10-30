@@ -49,14 +49,16 @@ function App() {
           style={{
             width: "50%",
             display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
             justifyContent: "space-between",
             marginBottom: "10vh",
-            color: "white",
-            alignItems: "center"
+            fontSize: 50
           }}
         >
-          <img id="uploadedimage" src="#" alt="my image"></img>
-          <p>{result}</p>
+          {" "}
+          <p style={{ margin: "0 0 0 0" }}>{result}</p>
+          <img id="uploadedimage" src="#" alt="" height="100" width="100"></img>
         </div>
       ) : (
         <span></span>
