@@ -82,12 +82,12 @@ app.post("/predict", (req, res) => {
   //fs.writeFile("images/image.png", file.data);
 });
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("front-end/build"));
-  app.get("*", (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname, "fruit-quality-evaluator", "build", "index.html")
-    );
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("front-end/build"));
+//   app.get("*", (req, res) => {
+//     res.sendFile(
+//       path.resolve(__dirname, "fruit-quality-evaluator", "build", "index.html")
+//     );
+//   });
+// }
 app.listen(port, () => console.log(`Listening on port ${port}`));
