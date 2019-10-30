@@ -12,14 +12,14 @@ function App() {
     const form = new FormData();
     form.append("file", image, file.filename);
 
-    console.log(image);
+    //console.log(image);
 
     axios
       .post("/predict", form, {
         headers: { "Content-Type": "multipart/form-data" }
       })
       .then(response => {
-        console.log(response.data);
+        //console.log(response.data);
         var labels = { 0: "Orange", 1: "Apple", 2: "Banana", 3: "Mixed" };
         const p = response.data;
         for (var key in p) {
