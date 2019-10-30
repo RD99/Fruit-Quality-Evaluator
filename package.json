@@ -16,7 +16,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "node index.js",
-    "server": "node index.js",
+    "server": "nodemon index.js",
     "app": "npm start --prefix fruit-quality-evaluator",
     "dev": "concurrently \"npm run server \" \"npm run app \"",
     "heroku-postbuild": "npm install --prefix fruit-quality-evaluator &&  npm run build --prefix fruit-quality-evaluator"

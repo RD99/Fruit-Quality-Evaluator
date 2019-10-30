@@ -34,7 +34,7 @@ app.post("/predict", (req, res) => {
       }
       //console.log("got pixels", pixels);
       const unit = new Uint8Array(pixels.data);
-      console.log(pixels.data.length);
+      //console.log(pixels.data.length);
       let img = new Array(1);
       img[0] = new Array(300);
       for (let x = 0; x < 300; x++) {
@@ -48,15 +48,15 @@ app.post("/predict", (req, res) => {
       }
       const unittensor = tf.tensor(unit);
       //const buffer = tf.buffer([1, 300, 300, 3], "int32", img);
-      console.log(tf.tensor(img));
+      //console.log(tf.tensor(img));
       tf.loadLayersModel(handler).then(model => {
         //const bowData = bow(file, true);
         //var data = tf.tensor2d(bowData, [1, bowData.length]);
         const prediction = model.predict(tf.tensor(img));
 
         //console.log(model);s
-        console.log("prediction" + prediction);
-        console.log(prediction.dataSync());
+        //console.log("prediction" + prediction);
+        //console.log(prediction.dataSync());
 
         res.send(prediction.dataSync());
       });
