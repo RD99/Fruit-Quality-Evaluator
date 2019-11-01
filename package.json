@@ -10,6 +10,7 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.1.6-alpha.6",
     "get-pixels": "^3.3.2",
+    "jimp": "^0.8.5",
     "nan": "^2.14.0",
     "nodemon": "^1.19.4"
   },
